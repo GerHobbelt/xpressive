@@ -304,7 +304,7 @@ namespace detail
     {
         typedef core_access<BidiIter> access;
         match_results<BidiIter> &what = *state.context_.results_ptr_;
-        BOOST_ASSERT(0 != re.regex_id());
+        BOOST_ASSERT(nullptr != re.regex_id());
 
         bool const partial_ok = state.flags_.match_partial_;
         save_restore<bool> not_null(state.flags_.match_not_null_, state.flags_.match_not_null_ || not_initial_null);
